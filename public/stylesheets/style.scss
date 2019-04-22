@@ -201,27 +201,19 @@ margin: 20px 0px 0px 80px;
 
 }
 .logo{
-margin-top: 60px;
-//  margin-left: 850px; 
+margin-top: 40px;
 }
-
-// ---
-
-
-
-
 
 // button login and singup
 .box{
+  margin-top: 250px;
   width: 300px;
   padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  /* background: #191919; */
   text-align: center;
-  /* box-shadow: -1px 92px 99px -62px rgba(3, 107, 255, 0.27), 0 1px 6px 0 rgba(10, 48, 255, 0.48); */
   border-radius: 5px;
 }
 .box h1{
@@ -268,8 +260,6 @@ margin-top: 60px;
 .box input[type = "submit"]:hover{
   background: #2ecc71;
 }
-
-
 .rainbow {
     display: block;
     font-size: 2em;
@@ -279,7 +269,6 @@ margin-top: 60px;
     margin-inline-end: 0px;
     font-weight: bold;
 }
-
 
 @-webkit-keyframes colorChange {
   0%   { border-color: #007bff;  }
@@ -304,4 +293,3 @@ margin-top: 60px;
   95% { border-color: #28a745;}
   100% { border-color: #20c997;}
 }
-// end od login and singup

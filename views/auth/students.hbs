@@ -1,3 +1,51 @@
 
 
-<p>ola</p>
+ <link rel="stylesheet" href="/stylesheets/swiper.min.css">
+ <link rel="stylesheet" href="/stylesheets/students.css">
+
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      <div class="imgBx">
+        <img src="/images/Jorge.jpeg" alt="">
+      </div>
+      <div class="details">
+        <h3>Jorge Bessa <br><span>Web Develepor</span></h3>
+      </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="imgBx">
+          <img src="/images/Jorge.jpeg" alt="">
+        </div>
+        <div class="details">
+          <h3>Jorge Bessa <br><span>Web Develepor</span></h3>
+        </div>
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script  src="/javascripts/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>

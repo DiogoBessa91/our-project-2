@@ -1,0 +1,43 @@
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 380px;
+  background: #fff;
+}
+
+.swiper-slide .imgBx{
+  border-radius:10px;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.swiper-slide .imgBx img{
+  width: 100%;
+}
+
+.swiper-slide .details{
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.swiper-slide .details h3{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  line-height: 20px;
+}
+
+.swiper-slide .details h3 span{
+  font-size: 16px;
+  color: #f44336;
+}
