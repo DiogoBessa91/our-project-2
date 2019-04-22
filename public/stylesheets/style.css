@@ -173,7 +173,11 @@ a, button {
   margin: 20px 0px 0px 80px; }
 
 .logo {
-  margin-top: 40px; }
+  margin: -50px 0px 0px 70px; }
+
+.colum {
+  display: flex;
+  flex-flow: column; }
 
 .box {
   margin-top: 250px;
