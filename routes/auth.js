@@ -60,4 +60,19 @@ router.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
+
+router.get("/students", (req, res, next) => {
+  res.render("auth/students");
+});
+
+
+router.get("/login", (req, res, next) => {
+  res.render("auth/login");
+});
+
+router.get("/signup", (req, res, next) => {
+  res.render("auth/signup");
+});
+
+
 module.exports = router;
