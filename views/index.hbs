@@ -1,16 +1,23 @@
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <section class="homePage">
 
 
 <div class="lettring">
+	<p>Welcome to Ironhack Community</p>
 <font size="+3">"Everyone fears <br> what they don't understand"</font>
 <div class="indexBtn">
+{{#if isConnected}}
+<a href="auth/logout">
+<button type="button" class="btn btn-dark">&nbsp Logout &nbsp</button>
+</a>
+{{else}}
 <a href="auth/login">
 <button type="button" class="btn btn-secondary">&nbsp Login &nbsp</button>
 </a>
 <a href="auth/signup">
 <button type="button" class="btn btn-dark">&nbsp Singup &nbsp</button>
 </a>
+{{/if}}
 </div>
 </div>
 

@@ -173,7 +173,7 @@ a, button {
   margin: 20px 0px 0px 80px; }
 
 .logo {
-  margin: -50px 0px 0px 70px; }
+  margin: -80px 0px 0px 70px; }
 
 .colum {
   display: flex;
@@ -283,5 +283,15 @@ a, button {
     border-color: #28a745; }
   100% {
     border-color: #20c997; } }
+
+.about {
+  margin: 10px 0 0 550px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.red-border {
+  width: 50%;
+  border-bottom: 5px solid #7e7575;
+  margin: 0 auto;
+  height: 20px; }
 
 /*# sourceMappingURL=style.css.map */

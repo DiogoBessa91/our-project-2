@@ -26,6 +26,7 @@ router.get("/signup", (req, res, next) => {
 router.post("/signup", (req, res, next) => {
   const username = req.body.username;
   const password = req.body.password;
+  console.log("DEBUG", username, password)
   if (username === "" || password === "") {
     res.render("auth/signup", { message: "Indicate username and password" });
     return;
@@ -42,12 +43,17 @@ router.post("/signup", (req, res, next) => {
 
     const newUser = new User({
       username,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      duty: req.body.duty,
       password: hashPass
     });
 
     newUser.save()
     .then(() => {
-      res.redirect("/");
+      req.logIn(newUser, () => {
+        res.redirect("/profile");
+      })
     })
     .catch(err => {
       res.render("auth/signup", { message: "Something went wrong" });
@@ -61,21 +67,8 @@ router.get("/logout", (req, res) => {
 });
 
 
-router.get("/students", (req, res, next) => {
-  res.render("auth/students");
-});
 
 
-router.get("/login", (req, res, next) => {
-  res.render("auth/login");
-});
 
-router.get("/signup", (req, res, next) => {
-  res.render("auth/signup");
-});
-
-router.get("/contacts", (req, res, next) => {
-  res.render("auth/contacts");
-});
 
 module.exports = router;
