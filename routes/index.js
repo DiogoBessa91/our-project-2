@@ -11,11 +11,28 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/edit-profile', (req, res, next) => {
+  console.log('XXXXXXXCREATE PROFILEXXXXXXXXX');
   User.findById(req.user._id)
    .then(user =>{
      res.render('edit-profile', {user});
 
    })
+});
+
+// Route POST /create-profile to receive the form submission
+router.post('/create-profile', uploadCloud.single('photo'), (req, res, next) => {
+  //Beca\ the info was sent with a post form, we can access data with 'req.body'
+  User.create(req.user, {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    role: req.body.role,
+    photo: req.file.url,
+    story: req.body.story
+
+  })
+  .then(() => {
+    res.redirect('/profile/')
+  })
 });
 
 // Route POST /create-book to receive the form submission
@@ -67,16 +84,15 @@ router.get("/profile", checkConnected, (req, res, next) => {
 
 router.get("/profile/:userId", (req, res, next) => {
   //get user with the id received on the params and send to the view
-  User.findByIdAndUpdate(req.user._id, {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    role: req.body.role,
-    photo: req.file.url,
-    story: req.body.story
-
-  })
-  .then(() => {
-    res.redirect("/auth/generalProfile", {user});
+  User.findById(req.params.userId)
+  //User.find({userId: req.params.userId})
+  .then((user) => {
+    console.log("XXXXXXXXXXXXXXXXXXXXX");
+    console.log(req.params.userId);
+    console.log(user);
+    res.render('auth/generalProfile', {
+      user
+    })
   })
 });
 
