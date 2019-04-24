@@ -3,8 +3,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("/images/back.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-
+  background-size: auto;
 }
 
 a {
@@ -164,12 +163,6 @@ a, button {
   background-color: rgba(42, 125, 158, 0.678);
 }
 
-// /* active style */
-// .csstransforms .cn-wrapper li.active a {
-//   background-color: #b31515;
-//   background-color: hsla(0, 88%, 70%, 1);
-// }
-
 /* hover style */
 .csstransforms .cn-wrapper li:not(.active) a:hover,
 .csstransforms .cn-wrapper li:not(.active) a:active,
@@ -192,8 +185,12 @@ a, button {
 .lettring{
   margin-top: 200px;
   margin-left: 20px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: OCR A Std, monospace;
 
+}
+
+.lettring p{
+  margin: 0px 0px -5px 10px;
 }
 
 .indexBtn{
@@ -207,6 +204,7 @@ margin: -80px 0px 0px 70px;
 .colum{
   display: flex;
   flex-flow: column;
+  margin-top: 60px;
 
 }
 

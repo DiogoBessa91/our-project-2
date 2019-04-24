@@ -5,24 +5,25 @@
 <div class="lettring">
 	<p>Welcome to Ironhack Community</p>
 <font size="+3">"Everyone fears <br> what they don't understand"</font>
+
 <div class="indexBtn">
 {{#if isConnected}}
 <a href="auth/logout">
-<button type="button" class="btn btn-dark">&nbsp Logout &nbsp</button>
+<button type="button" class="btn btn-outline-dark">&nbsp Logout &nbsp</button>
 </a>
 {{else}}
 <a href="auth/login">
-<button type="button" class="btn btn-secondary">&nbsp Login &nbsp</button>
+<button type="button" class="btn btn-outline-dark">&nbsp Login &nbsp</button>
 </a>
 <a href="auth/signup">
-<button type="button" class="btn btn-dark">&nbsp Singup &nbsp</button>
+<button type="button" class="btn btn-outline-secondary">&nbsp Signup &nbsp</button>
 </a>
 {{/if}}
 </div>
 </div>
 
 <div class="colum">
-<img src="/images/logoGif.gif" width="650" height="450" alt="">
-<img src="/images/logo.png" width="500" height="200" class="logo" alt="">
+<img src="/images/logoGif.gif" width="600" height="450" alt="">
+{{!-- <img src="/images/logo.png" width="500" height="200" class="logo" alt=""> --}}
 </div>
 </section>

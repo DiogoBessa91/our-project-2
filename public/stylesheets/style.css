@@ -4,7 +4,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("/images/back.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: auto; }
 
 a {
   color: #00B7FF; }
@@ -167,7 +167,10 @@ a, button {
 .lettring {
   margin-top: 200px;
   margin-left: 20px;
-  font-family: "Comic Sans MS", cursive, sans-serif; }
+  font-family: OCR A Std, monospace; }
+
+.lettring p {
+  margin: 0px 0px -5px 10px; }
 
 .indexBtn {
   margin: 20px 0px 0px 80px; }
@@ -177,7 +180,8 @@ a, button {
 
 .colum {
   display: flex;
-  flex-flow: column; }
+  flex-flow: column;
+  margin-top: 60px; }
 
 .box {
   margin-top: 250px;

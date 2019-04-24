@@ -1,6 +1,9 @@
 const express = require('express');
+const User = require('../models/User');
 const {checkConnected} = require('../middlewares');
 const router  = express.Router();
+const uploadCloud = require('../config/cloudinary');
+
 
 /* GET home page */
 router.get('/', (req, res, next) => {
@@ -9,12 +12,14 @@ router.get('/', (req, res, next) => {
 
 
 // Route POST /create-book to receive the form submission
-router.post('/create-profile', (req, res, next) => {
-  //Because the info was sent with a post form, we can access data with 'req.body'
+router.post('/create-profile', uploadCloud.single('photo'), (req, res, next) => {
+  //Beca\ the info was sent with a post form, we can access data with 'req.body'
   Profile.create({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     role: req.body.role,
+    photo: req.file.url,
+
   })
   .then(createdProfile => {
     res.redirect('/profile/'+createdProfile._id)
@@ -22,7 +27,10 @@ router.post('/create-profile', (req, res, next) => {
 });
 
 router.get("/students", (req, res, next) => {
-  res.render("auth/students");
+  User.find()
+  .then(usersFromDb => {
+    res.render("auth/students", { users: usersFromDb });
+  })
 });
 
 router.get("/contacts", (req, res, next) => {

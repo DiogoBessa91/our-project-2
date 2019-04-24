@@ -6,22 +6,16 @@
   <!-- Swiper -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
+      {{#each users}}
       <div class="swiper-slide">
       <div class="imgBx">
-        <img src="/images/Jorge.jpeg" alt="">
+        <img src="{{photo}}" alt="">
       </div>
       <div class="details">
-        <h3>Jorge Bessa <br><span>Web Develepor</span></h3>
+        <h3>{{firstName}}{{lastName}}<br><span>{{duty}}</span></h3>
       </div>
     </div>
-    <div class="swiper-slide">
-        <div class="imgBx">
-          <img src="/images/Jorge.jpeg" alt="">
-        </div>
-        <div class="details">
-          <h3>Jorge Bessa <br><span>Web Develepor</span></h3>
-        </div>
-      </div>
+    {{/each}}
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>

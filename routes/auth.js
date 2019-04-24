@@ -46,6 +46,7 @@ router.post("/signup", (req, res, next) => {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       duty: req.body.duty,
+      photo: `/uploads/${req.file.filename}`,
       password: hashPass
     });
 
