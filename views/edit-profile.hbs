@@ -1,0 +1,10 @@
+   <form class="box" action="/edit-profile" method="post" enctype="multipart/form-data">
+    <input type="text" name="username" value="{{user.username}}" placeholder="Username">
+    <input type="text" name="firstName" value="{{user.firstName}}"  placeholder="first name">
+    <input type="text" name="lastName" value="{{user.lastName}}" placeholder="last name">
+    <input type="text" name="duty" value="{{user.duty}}" placeholder="duty">
+    <input type="file" name="photo" value="{{user.photo}}">
+    <textarea name="story" id="" cols="30" rows="10" value="">{{user.story}}</textarea>
+    <input type="submit" name="" value="Save">
+    <br>
+  </form>

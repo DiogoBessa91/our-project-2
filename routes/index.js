@@ -10,19 +10,41 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
+router.get('/edit-profile', (req, res, next) => {
+  User.findById(req.user._id)
+   .then(user =>{
+     res.render('edit-profile', {user});
+
+   })
+});
 
 // Route POST /create-book to receive the form submission
-router.post('/create-profile', uploadCloud.single('photo'), (req, res, next) => {
+router.post('/edit-profile', uploadCloud.single('photo'), (req, res, next) => {
   //Beca\ the info was sent with a post form, we can access data with 'req.body'
-  Profile.create({
+  User.findByIdAndUpdate(req.user._id, {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     role: req.body.role,
     photo: req.file.url,
+    story: req.body.story
 
   })
-  .then(createdProfile => {
-    res.redirect('/profile/'+createdProfile._id)
+  .then(() => {
+    res.redirect('/profile/')
+  })
+});
+
+router.post('/students', (req, res, next) => {
+  User.findByIdAndUpdate(req.user._id, {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    role: req.body.role,
+    photo: req.file.url,
+    story: req.body.story
+
+  })
+  .then(() => {
+    res.redirect('/profile/')
   })
 });
 
@@ -41,6 +63,21 @@ router.get("/profile", checkConnected, (req, res, next) => {
   res.render("auth/profile", {
     user: req.user
   });
+});
+
+router.get("/profile/:userId", (req, res, next) => {
+  //get user with the id received on the params and send to the view
+  User.findByIdAndUpdate(req.user._id, {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    role: req.body.role,
+    photo: req.file.url,
+    story: req.body.story
+
+  })
+  .then(() => {
+    res.redirect("/auth/generalProfile", {user});
+  })
 });
 
 router.get("/about", (req, res, next) => {

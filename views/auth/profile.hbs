@@ -14,7 +14,7 @@
     <a class="navbar-brand js-scroll-trigger">
       <span class="d-none d-lg-block">
     {{!-- <input type="file" name="photo"> --}}
-    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="" alt="">
+    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{user.photo}}" alt="">
       </span>
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -31,7 +31,11 @@
         <div class="subheading mb-5">{{user.duty}}
          </div>
          {{!-- <textarea name="story" id="" cols="30" rows="10"></textarea> --}}
-        <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        <p class="lead mb-5">{{user.story}}</p>
+
+        <a href="/edit-profile">
+         <button type="button" class="btn btn-outline-dark">&nbsp Edit &nbsp</button>
+        </a>
         
       </div>
     </section>

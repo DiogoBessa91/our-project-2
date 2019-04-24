@@ -9,12 +9,13 @@
       {{#each users}}
       <div class="swiper-slide">
       <div class="imgBx">
-        <img src="{{photo}}" alt="">
+        <img onclick=card('{{_id}}') src="{{photo}}" alt="">
       </div>
       <div class="details">
-        <h3>{{firstName}}{{lastName}}<br><span>{{duty}}</span></h3>
+        <h3 >{{firstName}} {{lastName}}<br><span>{{duty}}</span></h3>
       </div>
     </div>
+      
     {{/each}}
     </div>
     <!-- Add Pagination -->
@@ -42,4 +43,9 @@
         el: '.swiper-pagination',
       },
     });
+
+
+    card = (x) => {
+      window.location.replace(`/profile/${x}`);
+    }
   </script>
