@@ -1,4 +1,5 @@
 .middle{
+  padding-right: 30px;
   position: sticky;
   top: 50%;
   transform: translateY(-50%);
