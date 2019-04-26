@@ -23,7 +23,6 @@ a {
 a, button {
 	outline: none;
 }
-
 .cn-wrapper {
   font-size: 1em;
   width: 26em;
@@ -52,7 +51,6 @@ a, button {
   -ms-transform: scale(1);
   transform: scale(1);
 }
-
 .cn-button {
   border: none;
   background: none;
@@ -71,13 +69,11 @@ a, button {
   cursor: pointer;
   z-index: 11;
 }
-
 .cn-button:hover,
 .cn-button:active,
 .cn-button:focus {
   color: white;
 }
-
 .cn-wrapper li {
   position: absolute;
   font-size: 1.5em;
@@ -124,40 +120,34 @@ a, button {
   -moz-transform: rotate(-10deg) skew(50deg);
   transform: rotate(-10deg) skew(50deg);
 }
-
 .csstransforms .cn-wrapper li:nth-child(2) {
   -webkit-transform: rotate(30deg) skew(50deg);
   -ms-transform: rotate(30deg) skew(50deg);
   -moz-transform: rotate(30deg) skew(50deg);
   transform: rotate(30deg) skew(50deg);
 }
-
 .csstransforms .cn-wrapper li:nth-child(3) {
   -webkit-transform: rotate(70deg) skew(50deg);
   -ms-transform: rotate(70deg) skew(50deg);
   -moz-transform: rotate(70deg) skew(50deg);
   transform: rotate(70deg) skew(50deg)
 }
-
 .csstransforms .cn-wrapper li:nth-child(4) {
   -webkit-transform: rotate(110deg) skew(50deg);
   -ms-transform: rotate(110deg) skew(50deg);
   -moz-transform: rotate(110deg) skew(50deg);
   transform: rotate(110deg) skew(50deg);
 }
-
 .csstransforms .cn-wrapper li:nth-child(5) {
   -webkit-transform: rotate(150deg) skew(50deg);
   -ms-transform: rotate(150deg) skew(50deg);
   -moz-transform: rotate(150deg) skew(50deg);
   transform: rotate(150deg) skew(50deg);
 }
-
 .csstransforms .cn-wrapper li:nth-child(odd) a {
   background-color: #00B7FF;
   background-color: rgba(0, 183, 255, 0.678);
 }
-
 .csstransforms .cn-wrapper li:nth-child(even) a {
   background-color: rgb(49, 126, 156);
   background-color: rgba(42, 125, 158, 0.678);
@@ -170,11 +160,9 @@ a, button {
   background-color: #241d49;
   background-color:#241d49;
 }
-.csstransforms .cn-wrapper li:not(.active) a:focus
-{
+.csstransforms .cn-wrapper li:not(.active) a:focus{
     position:fixed;
 }
-
 
 // HomePage Style 
 .homePage {
@@ -186,26 +174,20 @@ a, button {
   margin-top: 200px;
   margin-left: 20px;
   font-family: OCR A Std, monospace;
-
 }
-
 .lettring p{
   margin: 0px 0px -5px 10px;
 }
-
 .indexBtn{
 margin: 20px 0px 0px 80px;
-
 }
 .logo{
-// margin-top: 40px;
 margin: -80px 0px 0px 70px;
 }
 .colum{
   display: flex;
   flex-flow: column;
   margin-top: 60px;
-
 }
 
 // button login and singup
@@ -238,7 +220,6 @@ margin: -80px 0px 0px 70px;
   color: black;
   border-radius: 24px;
   transition: 0.25s;
-
 }
 .box input[type = "text"]:focus,.box input[type = "password"]:focus{
   width: 280px;
@@ -246,7 +227,6 @@ margin: -80px 0px 0px 70px;
   transition: height 0.3s, width 0.3s 0.1s
   // input:focus ~ .border
 }
-
 .box input[type = "submit"]{
   border:0;
   background: none;
@@ -301,6 +281,10 @@ margin: -80px 0px 0px 70px;
 //about
 .about{
   margin: 10px 0 0 550px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.aboutSchool{
+  margin: 10px 50px 0 100px;
   font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 .red-border {

@@ -292,6 +292,10 @@ a, button {
   margin: 10px 0 0 550px;
   font-family: Verdana, Geneva, Tahoma, sans-serif; }
 
+.aboutSchool {
+  margin: 10px 50px 0 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
 .red-border {
   width: 50%;
   border-bottom: 5px solid #7e7575;

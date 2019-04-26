@@ -11,7 +11,6 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/edit-profile', (req, res, next) => {
-  console.log('XXXXXXXCREATE PROFILEXXXXXXXXX');
   User.findById(req.user._id)
    .then(user =>{
      res.render('edit-profile', {user});
