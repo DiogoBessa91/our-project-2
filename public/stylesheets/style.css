@@ -4,7 +4,9 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url("/images/back.jpg");
   background-repeat: no-repeat;
-  background-size: auto; }
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center; }
 
 a {
   color: #00B7FF; }
@@ -184,7 +186,6 @@ a, button {
   margin-top: 60px; }
 
 .box {
-  margin-top: 250px;
   width: 300px;
   padding: 40px;
   position: absolute;
